@@ -14,7 +14,7 @@ The web app provides personalized information about possible job transitions and
 ### resume_scraping
 Script to scrape resumes (work experience and education) from indeed.ca.
 ### data_preprocessing
-Sript to clean and wrangle scraped data.
+Script to clean and wrangle scraped data.
 ### topic_modeling
 Script to process text and conduct nmf topic modeling.
 ### next_job_pipeline
