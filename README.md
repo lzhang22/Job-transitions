@@ -8,17 +8,19 @@ Planning to transit into a new job can be stressful. It's often hard to figure o
  
 ## Solution
 
-The web app provides personalized information about possible job transitions and relevant skills. Users of the web app are prompted to enter a brief description of their current data science job. The web app identifies individuals in the database who have had similar jobs as the user's current job. It then returns proportions of these individuals who later transition into jobs that require more of different skills (e.g., machine learning, data warehouse/governance, and management/leadership). The web app also gives examples of possible next jobs and related key skills.
+The web app provides personalized information about possible job transitions and relevant skills. Users of the web app are prompted to enter a brief description of their current data science job. The web app returns suggestions of future jobs, skills involved in those jobs (e.g., machine learning, statistical analysis), and keywords associated with the jobs.
 
 ## Files
 ### resume_scraping
-Script to scrape resumes (work experience and education) from indeed.ca.
+Scrapes data science/engineering related resumes (work experience and education) from indeed.ca.
 ### data_preprocessing
-Script to clean and wrangle scraped data.
+Cleans and wrangles scraped data.
 ### topic_modeling
-Script to process text and conduct nmf topic modeling.
+Pocesses text (job descriptions) and runs nmf topic modeling (trains a word2vec model to represent words in the dataset as vectors; semantic similarity between words is then used to compute coherence score for topic model seletion).
+### transition_matrix
+Computes probability of transitionsing from each topic at a job to each topic at the subsequent job. 
 ### next_job_pipeline
-Script to compare user's job description with job descriptions in dataset, identify possible next jobs, and compute changes in topic weights at job transitions.
+Processes user's input (current job description) and extracts its topics. Gets predicted future job by multiplying user's topic matrix with transition matrix. Then uses cosine similarity to find jobs in dataset that are most similar to the predicted future job and present information about those jobs.
 
  
  
