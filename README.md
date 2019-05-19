@@ -1,22 +1,18 @@
-# What's your next job?
+## What's your next job?
 
-A web app that helps individuals, more specifically, data scientists to make job transitions. 
+### Porject introduction and motivation
+A web app I developed as my Insight project. The motivation of the project is that job transitions is often stressful; it can be hard to figure out what next job might be good for you. I made a web app that provides users with personalized information about potential future jobs and skills important for such jobs. 
 
-## Problem statement
-
-Planning to transit into a new job can be stressful. It's often hard to figure out what next moves might be good for you. One way to help with such planning is to better understand skills that are important for job transitions given your current work experience. 
- 
-## Solution
-
-The web app provides personalized information about possible job transitions and relevant skills. Users of the web app are prompted to enter a brief description of their current data science job. The web app returns suggestions of future jobs, skills involved in those jobs (e.g., machine learning, statistical analysis), and keywords associated with the jobs.
+### Methodology
+To examine job transitions that have actually occurred, I used resumes
 
 ## Files
 ### resume_scraping
-Scrapes data science/engineering related resumes (work experience and education) from indeed.ca.
+Scrapes resumes (work experience and education) from indeed.ca. For my project, I focused on data science/analytics/enginerring related jobs.
 ### data_preprocessing
 Cleans and wrangles scraped data.
 ### topic_modeling
-Pocesses text (job descriptions) and runs nmf topic modeling (trains a word2vec model to represent words in the dataset as vectors; semantic similarity between words is then used to compute coherence score for topic model seletion).
+Pocesses text (job descriptions) and runs nmf topic modeling.  (a word2vec model is trained to represent words in the dataset as vectors; semantic similarity between words is then used to compute coherence score for topic model seletion).
 ### transition_matrix
 Computes probability of transitionsing from each topic at a job to each topic at the subsequent job. 
 ### next_job_pipeline
