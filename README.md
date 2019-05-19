@@ -1,7 +1,7 @@
 ## What's your next job?
 
-### Project introduction and motivation
-A web app I developed as my Insight project. The motivation of the project is that job transitions is often stressful; it can be hard to figure out what next job might be good for you. I made a web app that provides users with personalized information about potential future jobs and skills important for such jobs. 
+### Project motivation
+A web app I developed as my Insight project. The motivation of the project is that job transitions are often stressful; it can be hard to figure out what next job might be good for you. I made a web app that provides users with personalized information about potential future jobs and skills important for such jobs. 
 
 ### Methodology
 __Data__: to look at job transitions that have actually occurred, I used job experiences listed in resumes, which list job experiences in chronological order.
