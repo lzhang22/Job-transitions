@@ -18,3 +18,4 @@ __resume_scraping__: scrapes resumes (work experience and education) from indeed
 <br>__topic_modeling__: pocesses text (job descriptions) and runs nmf topic modeling. A word2vec model is trained to represent words in the dataset as vectors; semantic similarity between words is then used to compute coherence score for topic model seletion.
 <br>__transition_matrix__: computes probability of transitionsing from each topic at a current job to each topic at the subsequent job. 
 <br>__next_job_pipeline__: processes user input and extracts its topics, calculates predicted future job, find jobs in dataset that are most similar to the predicted future job and retrieve information about those jobs.
+<br>__validation__: computes cosine similarity between predicted future jobs and actual future jobs and compares to baseline similarity scores.
