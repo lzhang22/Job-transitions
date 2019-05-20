@@ -7,7 +7,6 @@ A web app I developed as my Insight project. The motivation of the project is th
 __Data__: to look at job transitions that have actually occurred, I used job experiences listed in resumes, which list job experiences in chronological order.
 <br>__Analysis pipeline__: the following is a snapshot of my analysis pipeline.
 ![Analysis Pipeline](analysispipeline.png)
-![Webapp Results](webapp_results.png)
 * After preprocessing and vectorizing job descriptions in resumes, NMF topic modeling is used to extract topics from each job description. Topics can be considered skills involved in different jobs.
 * Markov chain is used to model changes in dominant topics/skills as job transitions occur. A transition matrix, probability of transitioning from each topic/skill at a current job to each topic/skill at the subsequent job.
 * User input (brief description of current job) is processed in the same way as job descriptions in the dataset. Future job is predicted by multiplying topic matrix of user's current job and the transition matrix.
