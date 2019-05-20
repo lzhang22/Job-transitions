@@ -5,13 +5,16 @@ A web app I developed as my Insight project. The motivation of the project is th
 
 ### Methodology
 __Data__: to look at job transitions that have actually occurred, I used job experiences listed in resumes, which list job experiences in chronological order.
-<br>__Analysis pipeline__: the following is a snapshot of my analysis pipeline and an example results page of the web app.
+<br>__Analysis pipeline__: the following is a snapshot of my analysis pipeline.
 ![Analysis Pipeline](analysispipeline.png)
 ![Webapp Results](webapp_results.png)
 * After preprocessing and vectorizing job descriptions in resumes, NMF topic modeling is used to extract topics from each job description. Topics can be considered skills involved in different jobs.
 * Markov chain is used to model changes in dominant topics/skills as job transitions occur. A transition matrix, probability of transitioning from each topic/skill at a current job to each topic/skill at the subsequent job.
 * User input (brief description of current job) is processed in the same way as job descriptions in the dataset. Future job is predicted by multiplying topic matrix of user's current job and the transition matrix.
 * Cosine similarity is used to find jobs in the dataset that are most similar to the predicted future job (both of which are represented as vectors). Information about those most similar jobs including job title, key skills, and key words are retrieved and presented to user.
+
+Here's an example results page of my web app.
+![Webapp Results](webapp_results.png)
 
 ## Files
 __resume_scraping__: scrapes resumes (work experience and education) from indeed.ca. For this project, only data science/analytics/enginerring related jobs are scraped.
